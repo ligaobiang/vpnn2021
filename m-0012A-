@@ -197,9 +197,9 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-path: /hk51
-  - name: '❶香港 04 [BGP]'
+  - name: '❶香港 06 [BGP]'
     type: vmess
-    server: hk04.balala2016.xyz
+    server: hk06.balala2016.xyz
     port: '80'
     uuid: 04a29d10-3ddf-11ec-9e5a-6dc96ae988f5
     alterId: 0
@@ -208,9 +208,9 @@ proxies:
     skip-cert-verify: true
     network: ws
     ws-path: /balala
-  - name: '❶香港 06 [BGP]'
+  - name: '❶香港 01 [BGP]'
     type: vmess
-    server: hk06.balala2016.xyz
+    server: hk01.balala2016.xyz
     port: '80'
     uuid: 04a29d10-3ddf-11ec-9e5a-6dc96ae988f5
     alterId: 0
@@ -233,6 +233,17 @@ proxies:
   - name: '❶香港 03 [BGP]'
     type: vmess
     server: hk03.balala2016.xyz
+    port: '80'
+    uuid: 04a29d10-3ddf-11ec-9e5a-6dc96ae988f5
+    alterId: 0
+    cipher: auto
+    udp: true
+    skip-cert-verify: true
+    network: ws
+    ws-path: /balala
+  - name: ❶新加坡 01
+    type: vmess
+    server: sg01.balala2016.xyz
     port: '80'
     uuid: 04a29d10-3ddf-11ec-9e5a-6dc96ae988f5
     alterId: 0
@@ -330,10 +341,11 @@ proxy-groups:
       - '❶香港 B4 [H]'
       - '❷香港 C2 [推荐]'
       - '❷香港 C3 [推荐]'
-      - '❶香港 04 [BGP]'
       - '❶香港 06 [BGP]'
+      - '❶香港 01 [BGP]'
       - '❶香港 02 [BGP]'
       - '❶香港 03 [BGP]'
+      - ❶新加坡 01
       - ❶日本 02
       - '❶日本 03 [M]'
       - '❶美国 01 [转]'
@@ -363,10 +375,11 @@ proxy-groups:
       - '❶香港 B4 [H]'
       - '❷香港 C2 [推荐]'
       - '❷香港 C3 [推荐]'
-      - '❶香港 04 [BGP]'
       - '❶香港 06 [BGP]'
+      - '❶香港 01 [BGP]'
       - '❶香港 02 [BGP]'
       - '❶香港 03 [BGP]'
+      - ❶新加坡 01
       - ❶日本 02
       - '❶日本 03 [M]'
       - '❶美国 01 [转]'
@@ -409,6 +422,7 @@ rules:
   - 'DOMAIN-KEYWORD,china-cdn-net,REJECT'
   - 'DOMAIN-SUFFIX,cylink.link,REJECT'
   - 'DOMAIN-SUFFIX,as64271.net,REJECT'
+  - 'DOMAIN-SUFFIX,hitun.io,REJECT'
   - "DOMAIN-SUFFIX,ampproject.org,\U0001F3AF 节点选择"
   - "DOMAIN-SUFFIX,appspot.com,\U0001F3AF 节点选择"
   - "DOMAIN-SUFFIX,blogger.com,\U0001F3AF 节点选择"
@@ -860,7 +874,6 @@ rules:
   - "DOMAIN-SUFFIX,gmodules.com,\U0001F3AF 节点选择"
   - "DOMAIN-SUFFIX,godoc.org,\U0001F3AF 节点选择"
   - "DOMAIN-SUFFIX,golang.org,\U0001F3AF 节点选择"
-  - "DOMAIN-SUFFIX,gstatic.com,\U0001F3AF 节点选择"
   - "DOMAIN-SUFFIX,gv.com,\U0001F3AF 节点选择"
   - "DOMAIN-SUFFIX,gwtproject.org,\U0001F3AF 节点选择"
   - "DOMAIN-SUFFIX,itasoftware.com,\U0001F3AF 节点选择"
@@ -1511,6 +1524,7 @@ rules:
   - 'DOMAIN-SUFFIX,zhihu.com,DIRECT'
   - 'DOMAIN-SUFFIX,zhimg.com,DIRECT'
   - 'DOMAIN-SUFFIX,zhuihd.com,DIRECT'
+  - 'DOMAIN-SUFFIX,gstatic.com,DIRECT'
   - 'DOMAIN,download.jetbrains.com,DIRECT'
   - 'DOMAIN,images-cn.ssl-images-amazon.com,DIRECT'
   - 'IP-CIDR,119.28.28.28/32,DIRECT,no-resolve'
